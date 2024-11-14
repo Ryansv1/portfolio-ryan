@@ -14,17 +14,17 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <motion.nav
-      className="flex flex-row  bg-gray-400 rounded-lg h-14 shadow-md font p-2 max-w-max space-x-6 fixed top-2"
+      className="flex flex-row  bg-gray-900 rounded-lg h-14 shadow-md font p-2 max-w-max space-x-6 fixed top-2 z-30"
       initial={{ opacity: 0, origin: "center" }}
       animate={{ opacity: 1, origin: "left" }}
       exit={{ opacity: 0 }}
       transition={{ staggerChildren: 0.1, staggerDirection: 1 }}
     >
       <NavBarButton icon={<House />} route="/" />
-      <NavBarButton icon={<FolderCode />} route="/" />
-      <NavBarButton icon={<BriefcaseBusiness />} route="/" />
-      <NavBarButton icon={<CodeXml />} route="/" />
-      <NavBarButton icon={<PencilLine />} route="/" />
+      <NavBarButton icon={<FolderCode />} route="/school" />
+      <NavBarButton icon={<BriefcaseBusiness />} route="/works  " />
+      <NavBarButton icon={<CodeXml />} route="/techs" />
+      <NavBarButton icon={<PencilLine />} route="/contact" />
     </motion.nav>
   );
 };
@@ -73,7 +73,7 @@ const NavBarButtonToTop = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       // Added delay to the animation
-      className="rounded-lg bg-gray-400 p-2 text-white shadow-lg fixed bottom-4 right-4"
+      className="rounded-lg bg-gray-900 p-2 text-white shadow-lg fixed bottom-4 right-4"
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/compose/header";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -7,7 +8,6 @@ const Lexend = localFont({
   variable: "--font-lexend-regular",
   weight: "100 900",
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${Lexend.variable} antialiased`}
-      >
+      <body className={`${Lexend.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>
